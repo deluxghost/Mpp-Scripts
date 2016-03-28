@@ -102,7 +102,7 @@ function onUpdate() {
     if (c.pong_pos_x <= 4.0) {
         if (c.enemy_pos + 13.0 > c.pong_pos_y && c.enemy_pos - 13.0 < c.pong_pos_y) {
             c.pong_vec_x = -(c.pong_vec_x);
-            c.pong_vec_y = (c.pong_pos_y - c.enemy_pos) / 3.0;
+            c.pong_vec_y = (c.pong_pos_y - c.enemy_pos) / 3.0 + Math.random() * 2.0 - 1.0;
         } else {
             c.score++;
             setNewPong();
@@ -110,7 +110,7 @@ function onUpdate() {
     } else if (c.pong_pos_x >= 123.0) {
         if (c.player_pos + 13.0 > c.pong_pos_y && c.player_pos - 13.0 < c.pong_pos_y) {
             c.pong_vec_x = -(c.pong_vec_x);
-            c.pong_vec_y = (c.pong_pos_y - c.player_pos) / 3.0;
+            c.pong_vec_y = (c.pong_pos_y - c.player_pos) / 3.0 + Math.random() * 2.0 - 1.0;
         } else {
             c.failed++;
             setNewPong();
@@ -195,7 +195,7 @@ function setNewPong() {
     } else {
         c.pong_vec_x = -2.5;
     }
-    c.pong_vec_y = Math.random() - 0.5;
+    c.pong_vec_y = (Math.random() - 0.5) * 1.3;
     c.stat = "wait";
 }
 
