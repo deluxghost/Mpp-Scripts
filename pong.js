@@ -1,5 +1,5 @@
 /*
- * PONG - Play the earliest arcade video games in Minecraft!
+ * PONG - Play one of the earliest arcade video games in Minecraft!
  *
  * Pong is a 2D sports game that simulates table tennis.
  * Player controls a paddle on the right side of the screen, and hit a ball back and forth.
